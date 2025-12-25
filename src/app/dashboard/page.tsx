@@ -46,7 +46,7 @@ export default function DashboardPage() {
                 </Button>
             }
         >
-            <div className="grid gap-4 md:grid-cols-3 mb-8">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-8">
                 <KpiCard
                     title="Total Revenue"
                     value="$45,231.89"
