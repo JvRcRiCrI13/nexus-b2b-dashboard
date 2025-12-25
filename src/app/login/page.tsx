@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 import { SocialButton } from "@/components/atoms/SocialButton";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
@@ -43,14 +44,13 @@ export default function LoginPage() {
                         </div>
                     </div>
 
-                    <Link href="/dashboard" className="w-full">
-                        <Button
-                            variant="secondary"
-                            className="w-full bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border-indigo-100"
-                        >
-                            Acceso Demo (Sin Google)
-                        </Button>
-                    </Link>
+                    <Button
+                        variant="secondary"
+                        className="w-full bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border-indigo-100"
+                        onClick={() => signIn("credentials", { callbackUrl: "/dashboard" })}
+                    >
+                        Acceso Demo (Sin Google)
+                    </Button>
                 </div>
 
                 <div className="mt-8 text-center text-xs text-slate-500">
