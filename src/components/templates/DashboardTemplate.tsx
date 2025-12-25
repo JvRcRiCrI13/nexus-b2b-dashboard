@@ -19,6 +19,18 @@ export const DashboardTemplate = ({ children, title, action }: DashboardTemplate
     // Close mobile menu when clicking outside (overlay)
     const toggleMobile = () => setIsMobileOpen(!isMobileOpen);
 
+    // Prevent scrolling when mobile menu is open
+    React.useEffect(() => {
+        if (isMobileOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMobileOpen]);
+
     return (
         <div className="flex h-screen bg-slate-50 overflow-hidden">
             {/* Mobile Overlay */}

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 // Simple Header Component
 const Header = () => (
-    <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-white/80 backdrop-blur-sm border-b border-slate-100 transition-all">
+    <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 md:px-8 py-4 bg-white/80 backdrop-blur-sm border-b border-slate-100 transition-all">
         <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold shrink-0">
                 D
