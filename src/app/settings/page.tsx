@@ -42,7 +42,7 @@ export default function SettingsPage() {
                                 <p className="text-sm font-medium text-slate-700">Contraseña</p>
                                 <p className="text-xs text-slate-500">Último cambio hace 3 meses</p>
                             </div>
-                            <Button variant="outline" size="sm" className="w-full justify-center">
+                            <Button variant="secondary" size="sm" className="w-full justify-center">
                                 Cambiar Contraseña
                             </Button>
                         </div>

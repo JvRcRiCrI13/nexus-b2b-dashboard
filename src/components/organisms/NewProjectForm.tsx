@@ -5,7 +5,7 @@ import { Button } from '@/components/atoms/Button';
 import { FormField } from '@/components/molecules/FormField';
 
 export interface NewProjectFormProps {
-    onSubmit: (data: any) => void;
+    onSubmit: (data: { name: string; client: string; amount: string; date: string }) => void;
     onCancel: () => void;
     isLoading?: boolean;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Typography } from '@/components/atoms/Typography';
 
@@ -12,9 +12,9 @@ export interface UserProfileProps {
 export const UserProfile = ({ imageSrc, name, role, className }: UserProfileProps) => {
     return (
         <div className={cn("flex items-center gap-3 p-2", className)}>
-            <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-slate-100">
+            <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-slate-100">
                 {imageSrc ? (
-                    <img src={imageSrc} alt={name || 'User'} className="h-full w-full object-cover" />
+                    <Image src={imageSrc} alt={name || 'User'} fill className="object-cover" />
                 ) : (
                     <div className="flex h-full w-full items-center justify-center bg-slate-200 text-slate-500">
                         <span className="text-sm font-bold">{name ? name.charAt(0).toUpperCase() : 'U'}</span>

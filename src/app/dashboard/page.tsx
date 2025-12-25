@@ -15,7 +15,7 @@ export default function DashboardPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleCreateProject = async (data: any) => {
+    const handleCreateProject = async (data: { name: string; client: string; amount?: string; date?: string }) => {
         setIsLoading(true);
 
         // Simulate API delay

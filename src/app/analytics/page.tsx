@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { ResponsiveContainer } from "recharts";
 import { RevenueChart } from "@/components/organisms/analytics/RevenueChart";
 import { ProjectDistribution } from "@/components/organisms/analytics/ProjectDistribution";
 import { TopClients } from "@/components/organisms/analytics/TopClients";

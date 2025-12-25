@@ -6,6 +6,8 @@ import { Input } from "@/components/atoms/Input";
 import { Camera, Save } from "lucide-react";
 import { toast } from "sonner";
 
+import Image from "next/image";
+
 export const ProfileForm = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -17,11 +19,12 @@ export const ProfileForm = () => {
             {/* Avatar Section */}
             <div className="flex items-center gap-6">
                 <div className="relative group">
-                    <div className="h-24 w-24 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow-lg">
-                        <img
+                    <div className="relative h-24 w-24 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow-lg">
+                        <Image
                             src="https://api.dicebear.com/7.x/avataaars/svg?seed=Diego"
                             alt="Avatar"
-                            className="h-full w-full object-cover"
+                            fill
+                            className="object-cover"
                         />
                     </div>
                     <button type="button" className="absolute bottom-0 right-0 p-2 bg-indigo-600 rounded-full text-white shadow-md hover:bg-indigo-700 transition-colors">

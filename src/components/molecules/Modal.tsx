@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import { createPortal } from 'react-dom';
-import { cn } from '@/lib/utils';
 import { Typography } from '@/components/atoms/Typography';
 import { Button } from '@/components/atoms/Button';
 
@@ -18,6 +17,7 @@ export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
     }, []);
 

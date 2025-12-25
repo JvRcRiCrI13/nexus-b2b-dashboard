@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Sidebar } from '@/components/organisms/sidebar/sidebar';
 import { Typography } from '@/components/atoms/Typography';
-import { Button } from '@/components/atoms/Button';
 import { Menu, ChevronLeft } from 'lucide-react';
 
 interface DashboardTemplateProps {
