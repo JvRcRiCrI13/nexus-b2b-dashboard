@@ -33,16 +33,30 @@ export default function LoginPage() {
                 </div>
 
                 <div className="space-y-4">
-                    {/* <SocialButton provider="google" /> */}
+                    <Button
+                        variant="secondary"
+                        className="w-full bg-white hover:bg-slate-50 border-slate-200 text-slate-700 shadow-sm transition-all hover:shadow-md"
+                        onClick={() => signIn("credentials", { callbackUrl: "/dashboard" })}
+                    >
+                        <div className="flex items-center justify-center gap-3">
+                            <img
+                                src="https://authjs.dev/img/providers/google.svg"
+                                alt="Google Logo"
+                                width={20}
+                                height={20}
+                            />
+                            <span className="font-medium">Continuar con Google</span>
+                        </div>
+                    </Button>
 
-                    {/* <div className="relative">
+                    <div className="relative">
                         <div className="absolute inset-0 flex items-center">
                             <span className="w-full border-t border-slate-200" />
                         </div>
                         <div className="relative flex justify-center text-xs uppercase">
                             <span className="bg-white px-2 text-slate-400">O ingresa con</span>
                         </div>
-                    </div> */}
+                    </div>
 
                     <Button
                         variant="secondary"
